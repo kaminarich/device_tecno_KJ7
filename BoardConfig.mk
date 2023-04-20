@@ -179,5 +179,8 @@ ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/configs/vintf/manifest_tsts.xml
 # VNDK
 BOARD_VNDK_VERSION := current
 
+# Wi-Fi
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
 # Inherit the proprietary files
 include vendor/tecno/KJ7/BoardConfigVendor.mk
