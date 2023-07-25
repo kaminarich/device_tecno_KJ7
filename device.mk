@@ -213,9 +213,9 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
-
 PRODUCT_PACKAGES += \
-    libshim_ui
+    libshim_ui \
+    libshim_sink
     
 # Init
 PRODUCT_PACKAGES += \
