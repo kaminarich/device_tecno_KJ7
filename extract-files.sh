@@ -55,6 +55,10 @@ fi
 
 function blob_fixup {
     case "$1" in
+        system_ext/etc/init/init.vtservice.rc |\
+        vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc)
+            sed -i 's/start/enable/' "$2"
+            ;;
         system_ext/lib64/libsource.so)
             grep -q libui_shim.so "$2" || "$PATCHELF" --add-needed libui_shim.so "$2"
             ;;
