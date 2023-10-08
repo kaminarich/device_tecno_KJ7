@@ -1090,7 +1090,7 @@ on property:sys.boot_completed=1
     start spd_cpu_set_sh
 #SPD: add resmonitor and smartpanel bind small core by rui.fu 20230117 end
 
-    swapon_all /vendor/etc/fstab.enableswap
+    swapon_all /vendor/etc/fstab.mt6789
 
 #SPD: add for watermark_scale_factor at 20230302 start
 on property:sys.boot_completed=1

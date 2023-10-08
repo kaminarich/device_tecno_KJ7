@@ -62,7 +62,6 @@ PRODUCT_PACKAGES += \
     init.tran_mcf.sh \
 
 PRODUCT_PACKAGES += \
-    fstab.enableswap \
     fstab.mt6789 \
     fstab.mt6789.ramdisk \
     fstab.mt6789.vendor_ramdisk \
