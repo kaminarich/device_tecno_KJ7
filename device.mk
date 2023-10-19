@@ -213,6 +213,7 @@ PRODUCT_PACKAGES += \
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk.vendor \
+    android.hardware.security.rkp-V3-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor
 
