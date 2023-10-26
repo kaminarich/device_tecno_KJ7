@@ -60,6 +60,12 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
+
 # Init
 PRODUCT_PACKAGES += \
     init.insmod.sh \
