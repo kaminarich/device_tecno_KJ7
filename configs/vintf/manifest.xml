@@ -105,11 +105,6 @@
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.apmonitor</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IApmService/apm_hidl_service</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IAtcid/default</fqname>
@@ -138,11 +133,6 @@
         <name>vendor.mediatek.hardware.composer_ext</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IComposerExt/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.dmc</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IDmcService/dmc_hidl_service</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
