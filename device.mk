@@ -97,6 +97,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor \
     libcamera2ndk_vendor
 
+# Cgroup
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # Dalvik VM Configuration
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=24m \
