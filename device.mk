@@ -329,6 +329,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.1.vendor \
     android.hardware.usb@1.3.vendor
 
+# VNDK
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
