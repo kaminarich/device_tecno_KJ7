@@ -2503,13 +2503,11 @@ vendor/lib64/libaacvibrator.so
 vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 
 # WiFi
-vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/stp_dump3
 vendor/bin/wifi_dump
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
-vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/wlan_assistant.rc
