@@ -165,6 +165,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss-V1-ndk.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
 
@@ -209,6 +210,12 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     ueventd.mt6789.rc
 
+# Keymaster / Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V1-ndk.vendor \
+    android.hardware.security.secureclock-V1-ndk.vendor \
+    android.hardware.security.sharedsecret-V1-ndk.vendor
+
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
@@ -219,6 +226,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
+    android.hardware.light-V1-ndk.vendor \
     android.hardware.light@2.0.vendor:64
 
 # Media
@@ -244,6 +252,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-V1-ndk.vendor
 
 # Network tools
 PRODUCT_PACKAGES += \
@@ -316,6 +328,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power-V2-ndk.vendor \
     android.hardware.power@1.3.vendor \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
 
@@ -362,6 +375,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.1.vendor \
     android.hardware.usb@1.3.vendor
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V2-ndk.vendor
 
 # VNDK
 PRODUCT_PACKAGES += \

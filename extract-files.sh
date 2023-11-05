@@ -55,9 +55,31 @@ fi
 
 function blob_fixup {
     case "$1" in
+        vendor/bin/hw/android.hardware.gnss-service.mediatek |\
+        vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
+            "$PATCHELF" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "$2"
+            ;;
+        vendor/bin/hw/android.hardware.lights-service.mediatek)
+            "$PATCHELF" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "$2"
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "${2}"
             "$PATCHELF" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.memtrack-service.mediatek)
+            "$PATCHELF" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "$2"
+            ;;
+        vendor/bin/hw/android.hardware.security.keymint-service.trustonic)
+            "$PATCHELF" --replace-needed "android.hardware.security.keymint-V1-ndk_platform.so" "android.hardware.security.keymint-V1-ndk.so" "$2"
+            "$PATCHELF" --replace-needed "android.hardware.security.secureclock-V1-ndk_platform.so" "android.hardware.security.secureclock-V1-ndk.so" "$2"
+            "$PATCHELF" --replace-needed "android.hardware.security.sharedsecret-V1-ndk_platform.so" "android.hardware.security.sharedsecret-V1-ndk.so" "$2"
+            ;;
+        vendor/bin/hw/android.hardware.vibrator-service.mediatek)
+            "$PATCHELF" --replace-needed "android.hardware.vibrator-V2-ndk_platform.so" "android.hardware.vibrator-V2-ndk.so" "$2"
+            ;;
+        vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service |\
+        vendor/lib64/android.hardware.power-service-mediatek.so)
+            "$PATCHELF" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "$2"
             ;;
         vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc)
             sed -i 's/@1.2-mediatek/@1.2-mediatek-64b/g' "${2}"
