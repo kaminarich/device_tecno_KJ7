@@ -241,6 +241,10 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     ueventd.mt6789.rc
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-tpd.kl
+
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk.vendor \
