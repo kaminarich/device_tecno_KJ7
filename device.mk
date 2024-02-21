@@ -16,6 +16,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Enable virtual A/B OTA compression
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
+# Add vendor log tags
+include $(LOCAL_PATH)/configs/properties/vendor_log_tags.mk
+
 # A/B
 PRODUCT_PACKAGES += \
     update_engine \
