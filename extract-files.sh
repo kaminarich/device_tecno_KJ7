@@ -79,6 +79,12 @@ function blob_fixup {
         vendor/lib64/android.hardware.power-service-mediatek.so)
             "$PATCHELF" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "$2"
             ;;
+        vendor/bin/mnld |\
+        vendor/lib*/mt6789/libaalservice.so |\
+        vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so |\
+        vendor/lib64/mt6789/libcam.utils.sensorprovider.so)
+            grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            ;;
         vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc)
             sed -i 's/@1.2-mediatek/@1.2-mediatek-64b/g' "${2}"
             ;;
