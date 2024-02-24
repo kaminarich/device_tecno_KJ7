@@ -294,6 +294,7 @@ PRODUCT_PACKAGES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureOverlayKJ7 \
     FrameworksResOverlayKJ7 \
     TetheringConfigResOverlayKJ7 \
     WifiResOverlayKJ7
