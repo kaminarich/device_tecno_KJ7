@@ -1377,8 +1377,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Charger
-system_ext/bin/kpoc_charger
-system_ext/etc/init/kpoc_charger.rc
 vendor/bin/chg_sence
 vendor/etc/init/chg_sence_init.rc
 
