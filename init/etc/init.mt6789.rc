@@ -1053,3 +1053,6 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/foreground-l/cpu.shares 2048
     write /dev/cpuctl/background-l/cpu.shares 512
 #KERENL: add cgroup customise profiles by chaoquan.li at 20240110 end
+
+on property:sys.boot_completed=1
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
