@@ -4,6 +4,8 @@ ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
 
 # Camera
+persist.vendor.camera.privapp.list=org.lineageos.aperture
+vendor.camera.aux.packagelist=org.lineageos.aperture
 vendor.camera.tran.nums=1
 
 # Display
