@@ -311,6 +311,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayKJ7 \
     FrameworksResOverlayKJ7 \
+    SettingsProviderOverlayKJ7 \
     SystemUIOverlayKJ7 \
     TelephonyOverlayKJ7 \
     TetheringConfigResOverlayKJ7 \
