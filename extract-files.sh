@@ -87,10 +87,6 @@ function blob_fixup {
             "$PATCHELF" --replace-needed "libhidlbase.so" "libhidlbase-v31.so" "${2}"
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v31.so" "$2"
             ;;
-        vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service |\
-        vendor/lib64/android.hardware.power-service-mediatek.so)
-            "$PATCHELF" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "$2"
-            ;;
         vendor/bin/mnld |\
         vendor/lib*/mt6789/libaalservice.so |\
         vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so |\
