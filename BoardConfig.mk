@@ -149,6 +149,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Vendor Security Patch Level
 BOOT_SECURITY_PATCH := 2024-10-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
