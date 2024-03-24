@@ -312,6 +312,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayKJ7 \
     CarrierConfigOverlayKJ7 \
     FrameworksResOverlayKJ7 \
+    PowerOffAlarmOverlayKJ7 \
     SettingsProviderOverlayKJ7 \
     SystemUIOverlayKJ7 \
     TelephonyOverlayKJ7 \
