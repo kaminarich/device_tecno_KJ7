@@ -8,6 +8,9 @@ persist.vendor.camera.privapp.list=org.lineageos.aperture
 vendor.camera.aux.packagelist=org.lineageos.aperture
 vendor.camera.tran.nums=1
 
+# Dex
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
