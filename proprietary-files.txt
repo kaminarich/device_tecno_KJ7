@@ -1507,15 +1507,6 @@ vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
-# Eara IO
-vendor/bin/eara_io_service
-vendor/etc/init/eara-io-service.rc
-vendor/lib64/lib_eara_io_scndet.so
-vendor/lib64/lib_eara_io_service.so
-vendor/lib64/lib_eara_io_systracer.so
-vendor/lib64/lib_eara_io_timer.so
-vendor/lib64/lib_eara_io_util.so
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-mediatek
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
