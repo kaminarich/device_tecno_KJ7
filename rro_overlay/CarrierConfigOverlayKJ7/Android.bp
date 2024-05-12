@@ -1,0 +1,12 @@
+//
+// Copyright (C) 2023 ArrowOS
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+	name: "CarrierConfigOverlayKJ7",
+	theme: "CarrierConfigOverlay",
+	sdk_version: "current",
+	aaptflags: ["--keep-raw-values"],
+	product_specific: true,
+}
