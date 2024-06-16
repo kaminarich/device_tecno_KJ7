@@ -134,6 +134,9 @@ function blob_fixup {
             "$PATCHELF" --remove-needed "libhidlbase.so" "${2}"
             sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
             ;;
+        system_ext/lib64/libsource.so)
+            grep -q libshim_ui.so "$2" || "${PATCHELF}" --add-needed libshim_ui.so "${2}}"
+            ;;
         *)
             return 1
             ;;

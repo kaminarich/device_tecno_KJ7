@@ -213,6 +213,10 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
+
+PRODUCT_PACKAGES += \
+    libshim_ui
+    
 # Init
 PRODUCT_PACKAGES += \
     init.insmod.sh \
