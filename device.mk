@@ -47,6 +47,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio@7.0-impl \
