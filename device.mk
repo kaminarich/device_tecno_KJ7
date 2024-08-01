@@ -310,6 +310,7 @@ PRODUCT_PACKAGES += \
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureOverlayKJ7 \
+    BesLoudnessOverlayKJ7 \
     CarrierConfigOverlayKJ7 \
     FrameworksResOverlayKJ7 \
     PowerOffAlarmOverlayKJ7 \
