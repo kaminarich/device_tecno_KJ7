@@ -99,6 +99,9 @@ function blob_fixup {
         vendor/lib*/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
+        vendor/lib*/hw/audio.primary.mediatek.so)
+            "$PATCHELF" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
+            ;;
         vendor/lib64/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
