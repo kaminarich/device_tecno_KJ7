@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -55,69 +54,94 @@ fi
 
 function blob_fixup {
     case "$1" in
-        system_ext/etc/init/init.vtservice.rc |\
-        vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc)
+        system_ext/etc/init/init.vtservice.rc \
+        |vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc)
+            [ "$2" = "" ] && return 0
             sed -i 's/start/enable/' "$2"
             ;;
         system_ext/lib64/libsource.so)
+            [ "$2" = "" ] && return 0
             grep -q libui_shim.so "$2" || "$PATCHELF" --add-needed libui_shim.so "$2"
             ;;
-        vendor/bin/hw/android.hardware.gnss-service.mediatek |\
-        vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
+        vendor/bin/hw/android.hardware.gnss-service.mediatek \
+        |vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.lights-service.mediatek)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
+            [ "$2" = "" ] && return 0
             grep -q "libstagefright_foundation-v33.so" "${2}" || "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "${2}"
             "$PATCHELF" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.memtrack-service.mediatek)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.security.keymint-service.trustonic)
+            [ "$2" = "" ] && return 0
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || "$PATCHELF" --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             "$PATCHELF" --replace-needed "android.hardware.security.keymint-V1-ndk_platform.so" "android.hardware.security.keymint-V1-ndk.so" "$2"
             "$PATCHELF" --replace-needed "android.hardware.security.secureclock-V1-ndk_platform.so" "android.hardware.security.secureclock-V1-ndk.so" "$2"
             "$PATCHELF" --replace-needed "android.hardware.security.sharedsecret-V1-ndk_platform.so" "android.hardware.security.sharedsecret-V1-ndk.so" "$2"
             ;;
         vendor/bin/hw/mt6789/camerahalserver)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --replace-needed "libbinder.so" "libbinder-v31.so" "${2}"
             "$PATCHELF" --replace-needed "libhidlbase.so" "libhidlbase-v31.so" "${2}"
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v31.so" "$2"
             ;;
-        vendor/bin/mnld |\
-        vendor/lib*/mt6789/libaalservice.so |\
-        vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so |\
-        vendor/lib64/mt6789/libcam.utils.sensorprovider.so)
+        vendor/bin/mnld \
+        |vendor/lib*/mt6789/libaalservice.so \
+        |vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so \
+        |vendor/lib64/mt6789/libcam.utils.sensorprovider.so)
+            [ "$2" = "" ] && return 0
             grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
         vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc)
+            [ "$2" = "" ] && return 0
             sed -i 's/@1.2-mediatek/@1.2-mediatek-64b/g' "${2}"
             ;;
         vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml)
+            [ "$2" = "" ] && return 0
             sed -i 's/1.1/1.2/' "$2"
             ;;
         vendor/lib*/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
         vendor/lib*/hw/audio.primary.mediatek.so)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
             grep -q "libstagefright_foundation-v33.so" "${2}" || "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/lib*/libMtkOmxCore.so)
+            [ "$2" = "" ] && return 0
             sed -i "s/mtk.vendor.omx.core.log/ro.vendor.mtk.omx.log\x00\x00/" "$2"
             ;;
         vendor/lib64/libwifi-hal-mtk.so)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
-        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0-adapter-helper.so |\
-        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so)
+        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0-adapter-helper.so \
+        |vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so)
+            [ "$2" = "" ] && return 0
             "$PATCHELF" --remove-needed "libhidlbase.so" "${2}"
             sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 # Initialize the helper
