@@ -2082,7 +2082,6 @@ vendor/bin/bip_ap
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/bin/factory
 vendor/bin/gsm0710muxd
 vendor/bin/ipsec_mon
 vendor/bin/muxreport
