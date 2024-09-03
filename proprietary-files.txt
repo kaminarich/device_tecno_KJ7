@@ -1654,9 +1654,6 @@ vendor/etc/ipsec/strongswan.conf
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-default-mtk.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/slp_conf
-vendor/lib/hw/gps.default.so
-vendor/lib/librpc.so
-vendor/lib/libviagpsrpc.so
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
