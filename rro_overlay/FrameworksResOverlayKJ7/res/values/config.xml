@@ -394,4 +394,7 @@
           so that applications can still use their own mechanisms. -->
      <bool name="config_enableAutoPowerModes">true</bool>
 
+     <!-- Whether or not wcg mode should be enabled on this device -->
+     <bool name="config_enableWcgMode">true</bool>
+
 </resources>
