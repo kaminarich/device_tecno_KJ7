@@ -11,6 +11,9 @@ vendor.camera.tran.nums=1
 # Dex
 dalvik.vm.dex2oat64.enabled=true
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Display
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
