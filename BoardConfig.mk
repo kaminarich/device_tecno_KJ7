@@ -157,6 +157,16 @@ BOARD_AVB_VBMETA_VENDOR_KEY_PATH := $(BOARD_AVB_KEY_PATH)
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
+# Vintf
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+
+ODM_MANIFEST_SKUS += dsds qsqs ss tsts
+ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/configs/vintf/manifest_dsds.xml
+ODM_MANIFEST_QSQS_FILES := $(DEVICE_PATH)/configs/vintf/manifest_qsqs.xml
+ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/configs/vintf/manifest_ss.xml
+ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/configs/vintf/manifest_tsts.xml
+
 # VNDK
 BOARD_VNDK_VERSION := current
 
