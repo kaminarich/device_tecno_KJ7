@@ -52,6 +52,32 @@ PRODUCT_PACKAGES += \
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Init
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.spd_cpu_set.sh \
+    init.tran_mcf.sh \
+
+PRODUCT_PACKAGES += \
+    fstab.enableswap \
+    fstab.mt6789 \
+    fstab.mt6789.ramdisk \
+    fstab.mt6789.vendor_ramdisk \
+    init.aee.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6789.rc \
+    init.mt6789.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.recovery.mt6789.rc \
+    init.sensor_2_0.rc \
+    init.stnfc.rc \
+    init_connectivity.rc \
+    ueventd.mt6789.rc
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
