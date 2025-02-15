@@ -78,6 +78,20 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules/m
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/vendor_dlkm/*.ko)
 
 # Partitions
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+	boot \
+	odm_dlkm \
+	product \
+	system \
+	system_ext \
+	vbmeta \
+	vbmeta_system \
+	vbmeta_vendor \
+	vendor \
+	vendor_boot \
+	vendor_dlkm
+
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
