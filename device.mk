@@ -292,6 +292,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
+# Overlay
+PRODUCT_PACKAGES += \
+    FrameworksResOverlayKJ7 \
+    TetheringConfigResOverlayKJ7 \
+    WifiResOverlayKJ7
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
