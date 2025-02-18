@@ -228,9 +228,9 @@ PRODUCT_PACKAGES += \
     fstab.mt6789 \
     fstab.mt6789.ramdisk \
     fstab.mt6789.vendor_ramdisk \
-    init.cgroup.rc \
     init.connectivity.common.rc \
     init.modem.rc \
+    init.mt6789.power.rc \
     init.mt6789.rc \
     init.mt6789.usb.rc \
     init.mtkgki.rc \
