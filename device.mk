@@ -406,7 +406,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_sensors
+    libshim_sensors \
+    libui_shim
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
