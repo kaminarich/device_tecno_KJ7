@@ -386,7 +386,8 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 PRODUCT_PACKAGES += \
-    libhidlbase-v32.vendor
+    libhidlbase-v32.vendor \
+    libutils-v32
 
 # WiFi
 PRODUCT_PACKAGES += \
