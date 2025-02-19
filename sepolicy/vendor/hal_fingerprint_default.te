@@ -1,0 +1,39 @@
+# /sys/kernel/tran_fp/vendor_name
+allow hal_fingerprint_default sysfs_fp_name_path:dir r_dir_perms;
+allow hal_fingerprint_default sysfs_fp_name_path:file rw_file_perms;
+
+# /sys/kernel/tran_display/lcm_name
+# /sys/devices/platform/soc/14013000.dsi/lcm_name
+allow hal_fingerprint_default sysfs_lcm_name_file:file rw_file_perms;
+
+# /dev/silead_fp
+allow hal_fingerprint_default silead_fpd_device:chr_file rw_file_perms;
+
+# /data/vendor/silead/config/7015a088-00000000-00000000_algo.cfg
+allow hal_fingerprint_default silead_fpd_data_file:dir create_dir_perms;
+allow hal_fingerprint_default silead_fpd_data_file:file create_file_perms;
+
+# /dev/socket/property_service
+allow hal_fingerprint_default property_socket:sock_file write;
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+
+# /dev/input
+# /dev/input/event4
+allow hal_fingerprint_default input_device:dir { read open search };
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
+
+# /mnt/vendor/persist/caliuid.txt
+allow hal_fingerprint_default persist_data_file:dir { read write create open add_name search };
+allow hal_fingerprint_default persist_data_file:file { read write create getattr open };
+
+# vendor
+allow hal_fingerprint_default mnt_vendor_file:dir { read open search };
+allow hal_fingerprint_default mnt_vendor_file:file { read write getattr open };
+
+allow hal_fingerprint_default self:netlink_kobject_uevent_socket { read create bind setopt };
+
+allow hal_fingerprint_default goodix_fingerprint_service:hwservice_manager { add find };
+
+set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
+set_prop(hal_fingerprint_default, vendor_silead_fp_prop)
+set_prop(hal_fingerprint_default, vendor_mtk_default_prop)

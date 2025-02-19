@@ -1,0 +1,4 @@
+# /dev/hf_manager
+allow hal_audio_default hf_manager_device:chr_file rw_file_perms;
+
+get_prop(hal_audio_default, vendor_exported_system_prop)

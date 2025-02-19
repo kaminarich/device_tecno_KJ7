@@ -1,0 +1,34 @@
+# Transsion
+genfscon sysfs /devices/platform/mtk_ctd/power_supply                                                                   u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/odm/odm:usb_switch/power_supply                                                        u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-006b/power_supply                                             u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/11f00000.i2c/i2c-7/7-006f/power_supply                                             u:object_r:sysfs_batteryinfo:s0
+
+genfscon sysfs /devices/platform/soc/14013000.dsi/lcm_name                                                              u:object_r:sysfs_lcm_name_file:s0
+genfscon sysfs /kernel/tran_display/lcm_name                                                                            u:object_r:sysfs_lcm_name_file:s0
+
+genfscon sysfs /devices/virtual/sub_torch/sub_torch/sub_torch_level                                                     u:object_r:sysfs_sub_torch_file:s0
+genfscon sysfs /devices/virtual/torch/torch/torch_level                                                                 u:object_r:sysfs_torch_file:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/1a000000.camisp_legacy/wakeup                                                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/extcon_usb/wakeup                                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/mtk_ctd/power_supply/mtk_charger_type/wakeup                                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/odm/odm:tran_auto_test/power_supply/tran-auto-test/wakeup                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/odm/odm:usb_switch/power_supply/usb_switch/wakeup                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/pe5/wakeup                                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-gauge/power_supply/battery/wakeup      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-gauge/power_supply/mtk-gauge/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-rtc/rtc/rtc0/alarmtimer.1.auto/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-rtc/wakeup                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt635x-auxadc/wakeup                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/10228000.gce/wakeup                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11010000.spi1/spi_master/spi1/spi1.0/input/input4/wakeup                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11015000.i2c/i2c-3/3-0008/wakeup                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-006b/power_supply/charger/wakeup                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1101a000.i2c/i2c-6/6-004e/wakeup                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11f00000.i2c/i2c-7/7-006f/power_supply/primary_dvchg/wakeup                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11f00000.i2c/i2c-7/7-006f/wakeup                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1f000000.mdp/wakeup                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/input/input4/wakeup                                                                     u:object_r:sysfs_wakeup:s0

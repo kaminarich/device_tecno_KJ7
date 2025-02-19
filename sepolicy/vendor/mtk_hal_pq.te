@@ -1,0 +1,9 @@
+# /sys/kernel/tran_display/lcm_name
+allow mtk_hal_pq sysfs_lcm_name_file:file r_file_perms;
+
+# sdc16
+allow mtk_hal_pq persist_data_file:dir create_dir_perms;
+allow mtk_hal_pq persist_data_file:file create_file_perms;
+
+# vendor
+allow mtk_hal_pq mnt_vendor_file:dir search;

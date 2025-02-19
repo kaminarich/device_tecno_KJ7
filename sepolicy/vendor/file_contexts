@@ -1,0 +1,27 @@
+# Extcon
+/sys/devices/platform/extcon_usb/extcon/extcon0/cable.0/name                                        u:object_r:sysfs_extcon:s0
+/sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/name                                        u:object_r:sysfs_extcon:s0
+
+# Fingerprint
+/data/(vendor|system)/silead(/.*)?                                                                  u:object_r:silead_fpd_data_file:s0
+/data/vendor/camera_watermark(/.*)?                                                                 u:object_r:vendor_watermark_data_file:s0
+/dev/silead_fp                                                                                      u:object_r:silead_fpd_device:s0
+/persist/silead(/.*)?                                                                               u:object_r:silead_fpd_data_file:s0
+/(system\/vendor|vendor)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-mediatek        u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                u:object_r:hal_fingerprint_default_exec:s0
+
+# Transsion
+/dev/block/sdc64                                                                                    u:object_r:tranfs_block_device:s0
+/dev/elliptic[0-9]                                                                                  u:object_r:sensors_device:s0
+
+/sys/devices/platform/charger/tran_battery_cycle                                                    u:object_r:sysfs_bat_cycle:s0
+/sys/devices/platform/odm/odm:tran_auto_test/power_supply/tran-auto-test(/.*)                       u:object_r:sysfs_tran_auto_test:s0
+/sys/devices/platform/(odm/odm:tran_battery|tran_battery)/tran_cam                                  u:object_r:sysfs_tran_cam_file:s0
+/sys/devices/virtual/sub_torch/sub_torch/sub_torch_level                                            u:object_r:sysfs_sub_torch_file:s0
+/sys/devices/virtual/torch/torch/torch_level                                                        u:object_r:sysfs_torch_file:s0
+/sys/kernel/tran_fp(/.*)?                                                                           u:object_r:sysfs_fp_name_path:s0
+
+/(vendor|system/vendor)/bin/chg_sence                                                               u:object_r:chg_sence_exec:s0
+/vendor/bin/init\.spd_cpu_set\.sh                                                                   u:object_r:init_spdcpu_sh_exec:s0
+/(vendor|system\/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
+/(system\/vendor|vendor)/bin/hw/vendor\.transsion\.hardware\.trancam\.trancamserver@1\.0-service    u:object_r:trancamserver_exec:s0

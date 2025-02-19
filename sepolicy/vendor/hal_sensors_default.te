@@ -1,0 +1,22 @@
+binder_call(hal_sensors_default, hal_audio_default)
+
+hal_client_domain(hal_sensors_default, hal_audio)
+
+# /dev/elliptic0
+allow hal_sensors_default sensors_device:chr_file rw_file_perms;
+
+# /proc/bootconfig
+allow hal_sensors_default proc_bootconfig:file r_file_perms;
+
+# /sys/firmware/devicetree/base/firmware/android/compatible
+allow hal_sensors_default sysfs_dt_firmware_android:dir search;
+allow hal_sensors_default sysfs_dt_firmware_android:file r_file_perms;
+
+# sdc15
+allow hal_sensors_default gsi_metadata_file:dir search;
+
+# sdc8
+# /mnt/vendor/nvdata/APCFG/APRDCL/HWMON_3DHALL
+# /mnt/vendor/nvdata/APCFG/APRDCL/FILE_VER
+allow hal_sensors_default nvdata_file:dir search;
+allow hal_sensors_default nvdata_file:file r_file_perms;

@@ -1,0 +1,3 @@
+allow system_server hal_trancamserver_hwservice:hwservice_manager find;
+
+get_prop(system_server, wifi_hal_prop)

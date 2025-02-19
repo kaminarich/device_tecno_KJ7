@@ -1,0 +1,11 @@
+# /sys/devices/virtual/sub_torch/sub_torch/sub_torch_level
+# /sys/devices/virtual/torch/torch/torch_level
+allow cameraserver sysfs_sub_torch_file:file rw_file_perms;
+allow cameraserver sysfs_torch_file:file rw_file_perms;
+
+# /dev/dma_heap/mtk_svp_region-aligned
+allow cameraserver dmabuf_system_secure_heap_device:chr_file r_file_perms;
+
+allow cameraserver hal_trancamserver_hwservice:hwservice_manager find;
+
+get_prop(cameraserver, vendor_camera_prop)

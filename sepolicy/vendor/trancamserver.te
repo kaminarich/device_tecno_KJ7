@@ -1,0 +1,7 @@
+type trancamserver, domain, halserverdomain;
+type trancamserver_exec, file_type, exec_type, vendor_file_type;
+
+init_daemon_domain(trancamserver)
+
+allow trancamserver hal_trancamserver_hwservice:hwservice_manager { add find };
+allow trancamserver hidl_base_hwservice:hwservice_manager add;

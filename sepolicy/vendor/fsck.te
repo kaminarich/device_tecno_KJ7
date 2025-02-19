@@ -1,0 +1,4 @@
+# /dev/block/sdc64
+allow fsck tranfs_block_device:blk_file rw_file_perms;
+
+allow fsck sysfs_devices_block:dir search;

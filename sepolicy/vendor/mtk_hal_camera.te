@@ -1,0 +1,22 @@
+binder_call(mtk_hal_camera, trancamserver)
+
+# /data/vendor/camera_watermark/watermark.nv21
+allow mtk_hal_camera vendor_watermark_data_file:dir { read write open add_name search };
+allow mtk_hal_camera vendor_watermark_data_file:file { read write create getattr lock open };
+
+# /sys/devices/virtual/sub_torch/sub_torch/sub_torch_level
+# /sys/devices/virtual/torch/torch/torch_level
+allow mtk_hal_camera sysfs_sub_torch_file:file rw_file_perms;
+allow mtk_hal_camera sysfs_torch_file:file rw_file_perms;
+
+# /sys/devices/platform/odm/odm:tran_battery/tran_cam
+allow mtk_hal_camera sysfs_tran_cam_file:file rw_file_perms;
+
+# /dev/dma_heap/mtk_svp_region-aligned
+allow mtk_hal_camera dmabuf_system_secure_heap_device:chr_file r_file_perms;
+
+allow mtk_hal_camera hal_trancamserver_hwservice:hwservice_manager find;
+
+get_prop(mtk_hal_camera, exported_default_prop)
+get_prop(mtk_hal_camera, vendor_camera_prop)
+get_prop(mtk_hal_camera, vendor_mtk_camera_prop)

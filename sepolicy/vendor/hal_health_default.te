@@ -1,0 +1,8 @@
+# /sys/devices/platform/mtk_ctd/power_supply/mtk_charger_type/type
+# /sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch/type
+# /sys/devices/platform/soc/11017000.i2c/i2c-5/5-006b/power_supply/charger/type
+# /sys/devices/platform/soc/11f00000.i2c/i2c-7/7-006f/power_supply/primary_dvchg/type
+allow hal_health_default sysfs_batteryinfo:file r_file_perms;
+
+# /sys/devices/platform/odm/odm:tran_auto_test/power_supply/tran-auto-test/type
+allow hal_health_default sysfs_tran_auto_test:file r_file_perms;
