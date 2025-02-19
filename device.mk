@@ -385,6 +385,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+PRODUCT_PACKAGES += \
+    libhidlbase-v32.vendor
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \

@@ -88,6 +88,11 @@ function blob_fixup {
         vendor/lib64/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
+        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0-adapter-helper.so |\
+        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so)
+            "$PATCHELF" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
     esac
 }
 
