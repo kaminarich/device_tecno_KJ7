@@ -393,6 +393,9 @@ PRODUCT_PACKAGES += \
     libhidlbase-v32.vendor \
     libutils-v32
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v31.so
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \

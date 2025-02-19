@@ -75,6 +75,9 @@ function blob_fixup {
             "$PATCHELF" --replace-needed "android.hardware.security.secureclock-V1-ndk_platform.so" "android.hardware.security.secureclock-V1-ndk.so" "$2"
             "$PATCHELF" --replace-needed "android.hardware.security.sharedsecret-V1-ndk_platform.so" "android.hardware.security.sharedsecret-V1-ndk.so" "$2"
             ;;
+        vendor/bin/hw/mt6789/camerahalserver)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v31.so" "$2"
+            ;;
         vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service |\
         vendor/lib64/android.hardware.power-service-mediatek.so)
             "$PATCHELF" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "$2"
