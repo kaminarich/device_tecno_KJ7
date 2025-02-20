@@ -1,0 +1,14 @@
+persist.radio.multisim.config=tsts
+persist.vendor.radio.msimmode=tsts
+persist.vendor.radio.tsd.multisimmode=2
+ro.boot.product.hardware.sku=tsts
+ro.rlk_multi_gsensor_support=1
+ro.surface_flinger.set_idle_timer_ms=1200
+ro.telephony.sim.count=3
+ro.tran_high_brightness_mode.support=1
+ro.transsion.backlight.level=255
+ro.transsion.backlight.optimization=1
+ro.vendor.radio.max.multisim=tsts
+ro.vendor.transsion.hbm_mode_hal.support=1
+sys.surfaceflinger.idle_reduce_framerate_enable=yes
+telephony.active_modems.max_count=3
