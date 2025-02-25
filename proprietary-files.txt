@@ -1747,7 +1747,7 @@ system_ext/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/priv-app/ImsService/ImsService.apk|279efecfe48b4a26a767465ff4945d3724163387
+system_ext/priv-app/ImsService/ImsService.apk|4132477fd4c2c66fdd79df42a1fa9da65e327725
 
 # IMS (Vendor)
 vendor/bin/hw/vtservice_hidl
