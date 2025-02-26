@@ -1,0 +1,2 @@
+# /dev/usb-ffs/adb
+allow init functionfs:dir mounton;
