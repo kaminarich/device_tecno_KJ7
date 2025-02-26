@@ -1,6 +1,9 @@
 # /dev/cpuset/cpus
 allow vendor_init cgroup:file getattr;
 
+# proc
+allow vendor_init proc:file write;
+
 rw_dir_file(vendor_init, sysfs_ged)
 
 set_prop(vendor_init, exported_default_prop)
