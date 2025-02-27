@@ -4,6 +4,9 @@ allow vendor_init cgroup:file getattr;
 # proc
 allow vendor_init proc:file write;
 
+# pttyims, ptty2ims, ptty3ims
+allow vendor_init mtk_radio_device:lnk_file unlink;
+
 rw_dir_file(vendor_init, sysfs_ged)
 
 set_prop(vendor_init, exported_default_prop)
