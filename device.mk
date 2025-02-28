@@ -314,6 +314,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayKJ7 \
     FrameworksResOverlayKJ7 \
     PowerOffAlarmOverlayKJ7 \
+    SettingsOverlayKJ7 \
     SettingsProviderOverlayKJ7 \
     SystemUIOverlayKJ7 \
     TelephonyOverlayKJ7 \
