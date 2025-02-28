@@ -1378,7 +1378,11 @@ vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Charger
 vendor/bin/chg_sence
+vendor/bin/smartcharging
 vendor/etc/init/chg_sence_init.rc
+vendor/etc/init/init.charger.rc
+vendor/etc/init/smartcharging_init.rc
+vendor/lib64/libsmartcharging.so
 
 # Chipinfo
 vendor/bin/chipinfo
