@@ -11,16 +11,6 @@ vendor.camera.tran.nums=1
 # Dex
 dalvik.vm.dex2oat64.enabled=true
 
-# Disable vsync for cpu rendered apps
-debug.cpurend.vsync=false
-
-# Display
-debug.sf.enable_transaction_tracing=false
-debug.sf.hwc.min.duration=23000000
-debug.sf.predict_hwc_composition_strategy=0
-ro.opengles.version=196610
-vendor.debug.sf.display_dejitter=0
-
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
@@ -28,6 +18,10 @@ persist.sys.fuse.passthrough.enable=true
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# IPO
+sys.ipo.disable=1
+sys.ipo.pwrdncap=2
 
 # Low Memory Killer
 ro.config.per_app_memcg=false
@@ -40,6 +34,11 @@ ro.vendor.mtk_omacp_support=1
 
 # Partition
 ro.product.property_source_order=product,odm,vendor,system
+
+# Perf
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+ro.mtk_perf_simple_start_win=1
 
 # Radio
 vendor.rild.libargs=-d /dev/ttyC0
