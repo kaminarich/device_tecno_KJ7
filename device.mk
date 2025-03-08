@@ -167,10 +167,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -220,8 +216,6 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.insmod.sh \
-    init.spd_cpu_set.sh \
-    init.tran_mcf.sh \
 
 PRODUCT_PACKAGES += \
     fstab.mt6789 \
