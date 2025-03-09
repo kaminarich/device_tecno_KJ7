@@ -75,10 +75,6 @@ function blob_fixup {
             grep -q "libstagefright_foundation-v33.so" "${2}" || "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "${2}"
             "$PATCHELF" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
             ;;
-        vendor/bin/hw/android.hardware.memtrack-service.mediatek)
-            [ "$2" = "" ] && return 0
-            "$PATCHELF" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "$2"
-            ;;
         vendor/bin/hw/android.hardware.security.keymint-service.trustonic)
             [ "$2" = "" ] && return 0
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || "$PATCHELF" --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
@@ -137,12 +133,11 @@ function blob_fixup {
         system_ext/lib64/libsource.so)
             grep -q libshim_ui.so "$2" || "${PATCHELF}" --add-needed libshim_ui.so "${2}}"
             ;;
-        *)
-            return 1
-            ;;
         system_ext/lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_sink.so" "$2"
             ;;
+        *)
+            return 1
     esac
 
     return 0
