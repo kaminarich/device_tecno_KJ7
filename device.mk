@@ -135,10 +135,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
-    android.hardware.graphics.allocator@2.0.vendor \
-    android.hardware.graphics.allocator@3.0.vendor \
-    android.hardware.graphics.allocator@4.0.vendor
+    android.hardware.graphics.mapper@4.0.vendor \
+    android.hardware.graphics.allocator@4.0.vendor \
+    libion.vendor \
+    libui.vendor
 
 PRODUCT_PACKAGES += \
     libutilscallstack.vendor
