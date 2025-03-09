@@ -283,7 +283,7 @@ PRODUCT_COPY_FILES += \
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-V1-ndk.vendor
+    android.hardware.memtrack-service.mediatek-mali
 
 # Network tools
 PRODUCT_PACKAGES += \
