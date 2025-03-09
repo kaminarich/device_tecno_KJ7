@@ -10,6 +10,9 @@
 /(system\/vendor|vendor)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-mediatek        u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                u:object_r:hal_fingerprint_default_exec:s0
 
+# Lights
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.transsion u:object_r:hal_light_default_exec:s0
+
 # Transsion
 /dev/block/sdc64                                                                                    u:object_r:tranfs_block_device:s0
 /dev/elliptic[0-9]                                                                                  u:object_r:sensors_device:s0
