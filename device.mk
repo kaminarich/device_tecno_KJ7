@@ -262,8 +262,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk.vendor \
-    android.hardware.light@2.0.vendor:64
+    android.hardware.light-service.transsion
 
 # Media
 PRODUCT_PACKAGES += \
@@ -439,6 +438,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    hardware/transsion \
     $(LOCAL_PATH)
 
 # Thermal
