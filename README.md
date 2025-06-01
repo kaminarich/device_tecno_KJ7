@@ -1,0 +1,1 @@
+# device_tecno_KJ7
