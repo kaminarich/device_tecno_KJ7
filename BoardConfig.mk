@@ -154,7 +154,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # SEPolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+#include device/mediatek/sepolicy_vndr/SEPolicy.mk
 include hardware/transsion/sepolicy/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
